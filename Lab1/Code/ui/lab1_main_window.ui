@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>691</width>
+      <width>631</width>
       <height>521</height>
      </rect>
     </property>
@@ -32,8 +32,8 @@
    <widget class="QPushButton" name="plot_graph_button">
     <property name="geometry">
      <rect>
-      <x>790</x>
-      <y>390</y>
+      <x>770</x>
+      <y>500</y>
       <width>121</width>
       <height>32</height>
      </rect>
@@ -45,10 +45,10 @@
    <widget class="QWidget" name="gridLayoutWidget_4">
     <property name="geometry">
      <rect>
-      <x>720</x>
+      <x>660</x>
       <y>10</y>
-      <width>271</width>
-      <height>84</height>
+      <width>341</width>
+      <height>100</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_4">
@@ -67,25 +67,25 @@
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>110</y>
+      <x>700</x>
+      <y>120</y>
       <width>271</width>
-      <height>80</height>
+      <height>83</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="2" alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="step_label">
-       <property name="text">
-        <string>Step</string>
-       </property>
-      </widget>
-     </item>
      <item row="1" column="2">
       <widget class="QDoubleSpinBox" name="step_spinbox"/>
      </item>
      <item row="1" column="1">
       <widget class="QDoubleSpinBox" name="end_spinbox"/>
+     </item>
+     <item row="0" column="2" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="step_label">
+       <property name="text">
+        <string>Step (dx)</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QDoubleSpinBox" name="start_spinbox"/>
@@ -110,19 +110,49 @@
        </property>
       </widget>
      </item>
+     <item row="1" column="3">
+      <widget class="QDoubleSpinBox" name="b_value_spinbox"/>
+     </item>
+     <item row="0" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="b_coeff_value_label">
+       <property name="text">
+        <string>b</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>720</x>
-      <y>210</y>
+      <x>700</x>
+      <y>230</y>
       <width>273</width>
-      <height>162</height>
+      <height>252</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="1" column="0">
+     <item row="5" column="0">
+      <widget class="QComboBox" name="point_types_combobox"/>
+     </item>
+     <item row="4" column="0" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="point_types_label">
+       <property name="text">
+        <string>Point type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QComboBox" name="plot_style_combo_box"/>
+     </item>
+     <item row="2" column="0" colspan="2" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="plot_style_label">
+       <property name="text">
+        <string>Plot style</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
       <widget class="QComboBox" name="line_color_combo_box">
        <property name="editable">
         <bool>true</bool>
@@ -132,32 +162,22 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0" alignment="Qt::AlignHCenter">
+     <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="plot_line_color_label">
        <property name="text">
-        <string>Line color</string>
+        <string>Point color</string>
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QComboBox" name="line_style_combo_box"/>
-     </item>
-     <item row="2" column="0" alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="plot_line_style_label">
+     <item row="4" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="point_size_label">
        <property name="text">
-        <string>Line style</string>
+        <string>Point size</string>
        </property>
       </widget>
      </item>
-     <item row="4" column="0" alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="plot_style_label">
-       <property name="text">
-        <string>Plot style</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QComboBox" name="plot_style_combo_box"/>
+     <item row="5" column="1">
+      <widget class="QSpinBox" name="point_size_spinbox"/>
      </item>
     </layout>
    </widget>
@@ -168,7 +188,7 @@
      <x>0</x>
      <y>0</y>
      <width>1011</width>
-     <height>35</height>
+     <height>27</height>
     </rect>
    </property>
   </widget>
