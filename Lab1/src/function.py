@@ -7,7 +7,7 @@ import numpy as np
 # Якщо відбувається помилка в процесі обчислення,
 # її перехоплює блок except виводить відповідне повідомлення
 # та повертає None.
-def function(x: np.ndarray, b: float) -> np.ndarray | None:
+def function(x: np.ndarray, b: float):# -> np.ndarray | None:
 
     try:
         y = 15.28 * np.power(np.abs(x), -1.5) + np.cos(np.log(np.abs(x)) + b)
